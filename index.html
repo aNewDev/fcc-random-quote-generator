@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="custom.css">
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- General -->
+  <meta charset="utf-8">
+  <title>aNewDev | Random Quote Generator | Free Code Camp Portfolio Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do I need any of this?
+  fontawesome
+  <script src="https://use.fontawesome.com/f09f42a855.js"></script>
+
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $("#getMessage").click(function(){
+          $("#hide").hide();
+          $.ajax({
+          type: 'GET',
+          dataType: 'json',
+          url: 'https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en',
+          success: function(data){
+            $("#quotehere").html(data.quoteText + "<br>" + data.quoteAuthor);
+          }
+          });
+        });
+    });
+  </script>
+
+</head>
+
+<body>
+
+
+  <!-- quote box -->
+  <div class="container" id="quoteBox">
+    <div class="jumbotron">
+          <div>
+              <blockquote class="blockquote-reverse quote">
+                <p id="quotehere">words</p>
+                <p id="hide">no words</p>
+              </blockquote>
+          </div>
+          <div class = "row text-right">
+            <div class = "col-xs-12">
+              <button id = "getMessage" class = "btn btn-primary">
+                refresh quote
+              </button>
+            </div>
+          </div>
+    </div>
+  </div>
+
+</body>
+</html>
