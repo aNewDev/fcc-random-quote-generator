@@ -12,7 +12,6 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
 }
@@ -22,5 +21,5 @@ body {
 }
 
 #quotes-icon {
-  margin-right: 10px;
+  margin-right: 10px; /* create space between the quote icon and the quote text */
 }

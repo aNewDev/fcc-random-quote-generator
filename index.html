@@ -8,13 +8,13 @@
   <title>aNewDev | Random Quote Generator | Free Code Camp Portfolio Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- add jquery to my page using googleapis -->
+  <!-- add jquery using googleapis -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-  <!-- bootstrap css -->
+  <!-- add bootstrap css using maxcdn -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- fontawesome -->
+  <!-- add fontawesome -->
   <script src="https://use.fontawesome.com/f09f42a855.js"></script>
 
   <!-- link to custom scripts -->
@@ -25,23 +25,31 @@
 
 </head>
 
-<body class="bg-primary">
+<body id="body" class="bg-primary">
 
   <!-- quote box -->
   <div class="container">
     <div class="row">
+
       <div class="col-sm-3 col-md-3">
       </div>
+
       <div class="col-sm-6 col-md-6 well">
-        <blockquote class="blockquote-reverse text-primary">
+
+        <!-- quote and author -->
+        <blockquote id="blockquote" class="blockquote-reverse text-primary">
           <h2><i class="fa fa-quote-left" aria-hidden="true" id="quotes-icon"> </i><span id="quote">I am looking for the quote to load from the API</span></h2>
           <footer id="author">aNewDev</p>
         </blockquote>
+
+        <!-- refresh button -->
         <div class="text-right">
-          <button class="btn btn-primary" onclick="getQuote()">
+          <button id="btn" class="btn btn-primary" onclick="getQuote(); changeColor();">
             refresh quote
           </button>
         </div>
+
+        <!-- tweet the quote button -->
         <div class="text-right">
           <a class="twitter-share-button"
             id="twitterLink"
@@ -49,15 +57,20 @@
             <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
           </a>
         </div>
+        
       </div>
+
       <div class="col-sm-3 col-md-3">
       </div>
+
     </div>
   </div>
 
+  <!-- footer -->
   <footer class="footer text-center">
     <p class="text-muted">Built with much angst and learning by <a href="https://aNewDev.io" target="_blank">aNewDev</a> while completing <a href="https://freecodecamp.com" target="_blank">freeCodeCamp</a>. &copy; 2017 aNewDev</p>
   </footer>
 
 </body>
+
 </html>
