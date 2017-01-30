@@ -6,7 +6,7 @@ html {
 body {
   padding-top: 70px;
   padding-bottom: 60px;
-  background-color: blue;
+  background-color: #337ab7;
 }
 
 .footer {
@@ -20,4 +20,8 @@ body {
 
 .text-muted {
   margin: 20px 0;
+}
+
+#quotes-icon {
+  margin-right: 10px;
 }
